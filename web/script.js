@@ -3,20 +3,7 @@ const clock = $('.clock').FlipClock({
     showSeconds: false
 });
 
-function openFullscreen() {
-  const elem = document.documentElement; // whole page
-
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-
-// Call openFullscreen() on user interaction, e.g., a button click
-document.getElementById('fullscreenBtn').addEventListener('click', openFullscreen);
+// Removed openFullscreen and fullscreenBtn logic
 
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -51,22 +38,11 @@ function requestFullscreen() {
   }
 }
 
-function startClock() {
-  const clock = document.getElementById('clock');
-  setInterval(() => {
-    const now = new Date();
-    const h = String(now.getHours()).padStart(2, '0');
-    const m = String(now.getMinutes()).padStart(2, '0');
-    const s = String(now.getSeconds()).padStart(2, '0');
-    clock.textContent = `${h}:${m}:${s}`;
-  }, 1000);
-}
-
 function initClockApp() {
   document.getElementById('startButton').style.display = 'none';
-  requestFullscreen();
+  requestFullscreen(); // Request fullscreen on user gesture
   requestWakeLock();
-  startClock();
+  // No need to call startClock or update #clock manually
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -78,3 +54,5 @@ document.addEventListener('visibilitychange', () => {
     requestWakeLock();
   }
 });
+
+// Remove fullscreenBtn from HTML as well (do this in index.html)
