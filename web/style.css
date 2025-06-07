@@ -11,3 +11,19 @@ body {
 .clock {
     zoom: 2; /* increase size */
 }
+
+#clock {
+    font-size: 8vw;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
