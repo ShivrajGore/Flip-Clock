@@ -34,7 +34,7 @@ Turn your phone into a **distraction-free digital desk clock** — perfect for s
 - Custom alarm/sound feature  
 
 🌐 Try it here:  
-**https://yourusername.github.io/flip-clock/**
+(https://shivrajgore.github.io/Flip-Clock/)
 
 🙌 Simple. Silent. Focused.
 
