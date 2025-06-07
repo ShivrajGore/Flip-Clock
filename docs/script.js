@@ -39,7 +39,11 @@ function requestFullscreen() {
 }
 
 function initClockApp() {
-  document.getElementById('startButton').style.display = 'none';
+  const btn = document.getElementById('startButton');
+  btn.classList.add('vanish');
+  setTimeout(() => {
+    btn.style.display = 'none';
+  }, 400); // matches the CSS transition duration
   requestFullscreen(); // Request fullscreen on user gesture
   requestWakeLock();
   // No need to call startClock or update #clock manually
