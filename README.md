@@ -28,7 +28,6 @@ Turn your phone into a **distraction-free digital desk clock** — perfect for s
 
 💡 Future Ideas:
 ----------------
-- Flip-clock animation  
 - Optional date display  
 - Dark/light theme toggle  
 - Custom alarm/sound feature  
