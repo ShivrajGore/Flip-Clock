@@ -43,5 +43,4 @@ Turn your phone into a **distraction-free digital desk clock** — perfect for s
 
 You can **fork** this repository to your GitHub account or **clone** it locally:
 
-```bash
-git clone https://github.com/yourusername/flip-clock.git
+--> https://github.com/ShivrajGore/Flip-Clock.git
