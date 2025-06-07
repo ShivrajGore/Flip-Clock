@@ -3,15 +3,11 @@ const clock = $('.clock').FlipClock({
     showSeconds: false
 });
 
-// Removed openFullscreen and fullscreenBtn logic
-
 window.addEventListener('load', () => {
   setTimeout(() => {
     window.scrollTo(0, 1);
   }, 0);
 });
-
-// awake code
 
 let wakeLock = null;
 
@@ -39,14 +35,9 @@ function requestFullscreen() {
 }
 
 function initClockApp() {
-  const btn = document.getElementById('startButton');
-  btn.classList.add('vanish');
-  setTimeout(() => {
-    btn.style.display = 'none';
-  }, 400); // matches the CSS transition duration
-  requestFullscreen(); // Request fullscreen on user gesture
+  document.getElementById('startButton').style.display = 'none';
+  requestFullscreen();
   requestWakeLock();
-  // No need to call startClock or update #clock manually
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -13,13 +13,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="main-content">
-  <!-- ✅ Clock container -->
-  <div class="clock" id="clock"></div>
-  <button id="startButton" class="main-btn">FullScreen</button>
-  <div style="flex:1 0 0;"></div>
-  <div id="footer">An Alpha ⚡ build — helps you own it</div>
-</div>
+<!-- ✅ Clock container -->
+<div class="clock" id="clock"></div>
+<!-- Add startButton for triggering all functions -->
+<button id="startButton" style="position:fixed; top:60px; right:10px; z-index:1000; padding:0.6em 0.4em; min-width:unset; width:auto; font-size:0.95rem; letter-spacing:0;">Fullscreen</button>
 <!-- Theme toggle button -->
 <button id="themeToggle" style="position:fixed; top:10px; left:10px; z-index:1000;">Switch Theme</button>
 
@@ -33,6 +30,6 @@
 <script src="script.js"></script>
 
 <meta name="theme-color" content="#000000">
-
+<div id="footer">An Alpha ⚡ build — helps you own it</div>
 </body>
 </html>

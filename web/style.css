@@ -12,45 +12,38 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #000;
-    color: white;
-    font-family: sans-serif;
+    background: #10131a;
+    color: #f5f6fa;
+    font-family: 'Orbitron', 'Montserrat', 'Arial Rounded MT Bold', Arial, sans-serif;
     overflow: hidden;
-    /* Remove flex centering from html, body */
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    padding: 16px 0 56px 0;
+    letter-spacing: 0.02em;
 }
 
 .clock {
-    width: 100%;
-    max-width: 500px;
-    min-width: 220px;
-    zoom: 1.2;
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 auto;
+    zoom: 2.2;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
+    border-radius: 24px;
+    background: rgba(20, 22, 30, 0.92);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    padding: 2vw 4vw;
+    margin: 2vw auto 0 auto;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 #clock {
-    font-size: 10vw;
-    width: 100%;
+    font-size: 18vw;
+    height: 80vh;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    user-select: none;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #f5f6fa;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    border-radius: 18px;
+    background: transparent;
+    transition: color 0.3s;
 }
 
 #startButton {
@@ -76,21 +69,9 @@ html, body {
   font-size: 0.8rem;
   font-style: italic;
   color: #aaa;
-  opacity: 0.6;
-  letter-spacing: 0.5px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.header {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 40px;
-    color: #888;
-    font-weight: 500;
-    opacity: 0.8;
-    letter-spacing: 0.5px;
-    width: 100vw;
-    position: static;
+  opacity: 100%;
+  letter-spacing: 0.05px;
+  font-family: 'Orbitron', 'Montserrat', 'Arial Rounded MT Bold', Arial, sans-serif;
 }
 
 body.light-mode {
@@ -108,10 +89,6 @@ body.light-mode #startButton {
     color: #fff;
 }
 
-body.light-mode .header {
-    color: #222;
-}
-
 body.dark-mode {
     background-color: #000;
     color: #fff;
@@ -125,73 +102,4 @@ body.dark-mode #clock {
 body.dark-mode #startButton {
     background-color: #fff;
     color: #000;
-}
-
-body.dark-mode .header {
-    color: #fff;
-}
-
-.main-btn {
-    width: 90vw;
-    max-width: 320px;
-    min-width: 120px;
-    font-size: 1.2rem;
-    padding: 0.8rem 0;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    margin: 24px 0 0 0;
-    box-sizing: border-box;
-    transition: opacity 0.4s, transform 0.4s;
-}
-
-.main-btn.vanish {
-    opacity: 0;
-    transform: scale(0.8) translateY(-30px);
-    pointer-events: none;
-}
-
-.main-btn.splash {
-    animation: splash 0.4s cubic-bezier(0.4,0,0.2,1);
-}
-
-@keyframes splash {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
-        transform: scale(1);
-    }
-    60% {
-        box-shadow: 0 0 20px 20px rgba(0,0,0,0.1);
-        transform: scale(1.15);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0,0,0,0);
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 600px) {
-    .clock {
-        zoom: 1;
-        max-width: 98vw;
-    }
-    #clock {
-        font-size: 14vw;
-    }
-    .main-btn {
-        font-size: 1rem;
-        padding: 0.7rem 0;
-    }
-}
-
-@media (max-width: 400px) {
-    #clock {
-        font-size: 18vw;
-    }
-    .main-btn {
-        font-size: 0.95rem;
-        padding: 0.6rem 0;
-    }
 }
