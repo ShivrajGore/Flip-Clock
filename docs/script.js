@@ -55,4 +55,20 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 
-// Remove fullscreenBtn from HTML as well (do this in index.html)
+document.getElementById('themeToggle').addEventListener('click', function() {
+  const body = document.body;
+  if (body.classList.contains('light-mode')) {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    this.textContent = 'Switch Theme';
+  } else {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    this.textContent = 'Switch Theme';
+  }
+});
+
+// On load, set dark mode as default
+window.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('dark-mode');
+});

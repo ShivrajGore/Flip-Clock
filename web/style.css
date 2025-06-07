@@ -8,8 +8,29 @@ body {
     align-items: center;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+    /* Remove flex centering from html, body */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+}
+
 .clock {
-    zoom: 2; /* increase size */
+    zoom: 2;
+    margin-top: 60px;
 }
 
 #clock {
@@ -21,19 +42,6 @@ body {
     align-items: center;
     color: white;
     user-select: none;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #000;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    overflow: hidden;
 }
 
 #startButton {
@@ -49,4 +57,67 @@ html, body {
   color: black;
   cursor: pointer;
   z-index: 9999;
+}
+
+#footer {
+  position: fixed;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #aaa;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+    font-weight: 500;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    width: 100vw;
+    position: static;
+}
+
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+body.light-mode .clock,
+body.light-mode #clock {
+    color: #222;
+}
+
+body.light-mode #startButton {
+    background-color: #222;
+    color: #fff;
+}
+
+body.light-mode .header {
+    color: #222;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark-mode .clock,
+body.dark-mode #clock {
+    color: #fff;
+}
+
+body.dark-mode #startButton {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode .header {
+    color: #fff;
 }

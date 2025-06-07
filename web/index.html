@@ -13,8 +13,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- ✅ Clock container -->
-<div class="clock" id="clock"></div>
+<div class="main-content">
+  <!-- ✅ Clock container -->
+  <div class="clock" id="clock"></div>
+  <div style="flex:1 0 0;"></div>
+  <div id="footer">An Alpha ⚡ build — helps you own it</div>
+</div>
+<!-- Add startButton for triggering all functions -->
+<button id="startButton" style="position:fixed; top:10px; right:10px; z-index:1000;">Start Clock</button>
+
+<!-- Theme toggle button -->
+<button id="themeToggle" style="position:fixed; top:10px; left:10px; z-index:1000;">Switch Theme</button>
 
 <!-- ✅ jQuery (required by FlipClock): put here at end of <body> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -24,9 +33,6 @@
 
 <!-- ✅ Your custom JS -->
 <script src="script.js"></script>
-
-<!-- Add startButton for triggering all functions -->
-<button id="startButton" style="position:fixed; top:10px; right:10px; z-index:1000;">Start Clock</button>
 
 <meta name="theme-color" content="#000000">
 
